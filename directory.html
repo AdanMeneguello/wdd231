@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My City Chamber</title>
+    <meta name="description" content="Main page - WDD231 - W02 Assignment: Chamber Directory Page" />
+    <meta name="author" content="Adan Souza Meneguello" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+
+    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+
+    <meta property="og:title" content="My City Chamber | Directory">
+    <meta property="og:description" content="Find local businesses and chamber members">
+    <!--<meta property="og:image" content="images/image.jpg" > -->
+    <meta property="og:url" content="https://adanmeneguello.github.io/wdd231/directory.html">
+
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <a href="./directory.html">My City Chamber</a>
+        </div>
+
+
+        <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+        <nav id="site-nav" class="nav">
+            <ul>
+                <li><a href="./directory.html" aria-current="page">Directory</a></li>
+                <li><a href="./discovery.html">Discover</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Member directory</h1>
+
+        <div class="view-toggle"><!-- role="group" aria-label="View toggle"-->
+            <button id="gridBtn" class="active">Grid</button><!--aria-pressed="true"-->
+            <button id="listBtn">List</button><!--aria-pressed="false"-->
+        </div>
+
+        <section id="members" class="grid"></section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> 🌌 <span class="student-name">Adan Souza Meneguello</span> 🌌 Brazil</p>
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+
+    <script src="scripts/utils.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</body>
+</html>

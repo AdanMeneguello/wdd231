@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Alpha Tech",
+      "address": "101 Innovation Way, My City",
+      "phone": "(555) 111-1001",
+      "url": "https://alphatech.example.com",
+      "image": "images/alpha.jpg",
+      "membership": 3,
+      "blurb": "Cloud & AI solutions"
+    },
+    {
+      "name": "Bravo Foods",
+      "address": "22 Market St, My City",
+      "phone": "(555) 222-2002",
+      "url": "https://bravofoods.example.com",
+      "image": "images/bravo.jpg",
+      "membership": 2,
+      "blurb": "Local gourmet market"
+    }
+
+  ]
