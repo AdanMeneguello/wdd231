@@ -24,7 +24,8 @@ body{
 
 .site-header .brand a{
     color: var(--brand);
-    font-weight: 700;
+    font-size: x-large;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -136,6 +137,5 @@ body{
     }
     #menu-btn{
         display: none;
-
     }
 }
