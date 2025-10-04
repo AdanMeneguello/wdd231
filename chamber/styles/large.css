@@ -1,0 +1,52 @@
+/* ========= large.css ========= */
+
+@media (min-width: 760px){
+
+    #menuBtn{
+      display: none;
+    }
+  
+    #primaryNav{
+      display: block;
+      border-top: 0;
+      margin-left: auto;
+    }
+  
+    #primaryNav a{
+      display: inline-block;
+      padding: .5rem .75rem;
+      border-radius: .5rem;
+    }
+  
+    #primaryNav a:hover{
+      background: #f3f4f6;
+      text-decoration: none;
+    }
+  
+    .hero__cta{
+      inset: auto auto 1.5rem 2rem;
+    }
+  
+    .hero__cta h1{
+      font-size: clamp(1.75rem, 1.2vw + 1rem, 2.5rem);
+    }
+  
+    .forecast-grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .cards{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .spotlights .cards .card{
+      grid-template-columns: 64px 1fr;
+    }
+  }
+  
+  @media (min-width: 1040px){
+    .cards{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

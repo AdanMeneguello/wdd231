@@ -1,0 +1,72 @@
+<!-- /chamber/index.html -->
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jundiaí Chamber Home</title>
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/large.css" />
+</head>
+<body>
+  <header>
+    <a class="brand" href="./index.html">Jundiai Chamber</a>
+    <button id="menuBtn" aria-label="abrir menu">☰</button>
+    <nav id="primaryNav" class="closed">
+      <a href="./directory.html">Directory</a>
+      <a href="./discover.html">Discover</a>
+      <a href="./join.html">Join</a>
+      <a class="active" href="./index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <img src="./images/hero.jpg" alt="Jundiai Center" />
+      <div class="hero__cta">
+        <h1>Connect. Grow. Impact lives.</h1>
+        <a class="btn btn-primary" href="./join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events" aria-labelledby="events-title">
+      <h2 id="events-title">Eventss</h2>
+      <ul id="events-list">
+        <!-- Pode começar estático e depois integrar a uma fonte real -->
+        <li><strong>Bussiness Breakfast Time</strong> — 10/10, 08:00</li>
+        <li><strong>Workshop SEO Local</strong> — 10/15, 19:00</li>
+      </ul>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="weather" aria-labelledby="weather-title">
+      <h2 id="weather-title">Jundiaí Weather</h2>
+      <div id="current-weather">
+        <p><span id="temp-now">—</span>°C • <span id="desc-now">—</span></p>
+      </div>
+      <div id="forecast" class="forecast-grid">
+      </div>
+    </section>
+
+    <!-- SPOTLIGHTS -->
+    <section class="spotlights" aria-labelledby="spotlights-title">
+      <h2 id="spotlights-title">Membros Highlights</h2>
+      <div id="spotlights-wrap" class="cards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Adan Souza Meneguello Brazil</p>
+    <p>Last Modification: <span id="last-mod"></span></p>
+  </footer>
+
+  <script src="./scripts/nav.js" defer></script>
+  <script src="./scripts/weather.js" defer></script>
+  <script src="./scripts/spotlights.js" defer></script>
+  <script>
+    document.getElementById('last-mod').textContent = document.lastModified;
+  </script>
+</body>
+</html>
