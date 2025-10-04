@@ -1,42 +1,57 @@
 <!-- /chamber/index.html -->
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jundiaí Chamber Home</title>
+  <meta name="description" content="Home page | Jundiai Chamber of Chamber" />
+  <meta name="author" content="Adan Souza Meneguello" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles/base.css" />
   <link rel="stylesheet" href="./styles/large.css" />
+  <link rel="stylesheet" href="./styles/directory.css" />
+
 </head>
 <body>
-  <header>
-    <a class="brand" href="./index.html">Jundiai Chamber</a>
-    <button id="menuBtn" aria-label="abrir menu">☰</button>
-    <nav id="primaryNav" class="closed">
-      <a href="./directory.html">Directory</a>
-      <a href="./discover.html">Discover</a>
-      <a href="./join.html">Join</a>
-      <a class="active" href="./index.html">Home</a>
+  <header class="site-header">
+    <div class="brand">
+        <a href="./directory.html">Jundiai Chamber of Commerce</a>
+    </div>
+
+    <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="nav">
+        <ul>
+            <li><a href="./directory.html" >Directory</a></li>
+            <li><a href="./discovery.html">Discover</a></li>
+            <li><a href="./join.html">Join</a></li>
+            <li><a href="./index.html" aria-current="page">Home</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
   <main>
     <!-- HERO -->
     <section class="hero">
-      <img src="./images/hero.jpg" alt="Jundiai Center" />
+      <img src="./images/hero1.png" alt="Jundiai Chamber of Commerce" />
       <div class="hero__cta">
-        <h1>Connect. Grow. Impact lives.</h1>
+        <h1>Chamber of Commerce Jundiai City</h1>
+        <h3>Connect. Grow. Impact. Help us help lives!</h3>
         <a class="btn btn-primary" href="./join.html">Join the Chamber</a>
       </div>
     </section>
 
     <!-- EVENTS -->
     <section class="events" aria-labelledby="events-title">
-      <h2 id="events-title">Eventss</h2>
+      <h2 id="events-title">Events</h2>
       <ul id="events-list">
-        <!-- Pode começar estático e depois integrar a uma fonte real -->
-        <li><strong>Bussiness Breakfast Time</strong> — 10/10, 08:00</li>
-        <li><strong>Workshop SEO Local</strong> — 10/15, 19:00</li>
+        <li><strong>Business Networking Breakfast</strong> — 10/10, 08:00am </li>
+        <li><strong>Consumer Debate - Night Markets</strong> — 10/12, 15:30pm</li>
+        <li><strong>Workshop SEO Local</strong> — 10/15, 07:00pm</li>
       </ul>
     </section>
 
@@ -52,7 +67,7 @@
 
     <!-- SPOTLIGHTS -->
     <section class="spotlights" aria-labelledby="spotlights-title">
-      <h2 id="spotlights-title">Membros Highlights</h2>
+      <h2 id="spotlights-title">Members Highlights</h2>
       <div id="spotlights-wrap" class="cards"></div>
     </section>
   </main>

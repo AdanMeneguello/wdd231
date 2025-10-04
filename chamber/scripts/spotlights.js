@@ -34,7 +34,7 @@ async function loadSpotlights() {
     });
   } catch (e) {
     console.error('Spotlights error', e);
-    wrap.textContent = 'Não foi possível carregar os destaques.';
+    wrap.textContent = 'Data not found. Sorry !';
   }
 }
 loadSpotlights();
