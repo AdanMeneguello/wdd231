@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You – Chamber</title>
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/thanks.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="./index.html">Chamber</a>
+    <nav class="site-nav">
+      <a href="./index.html">Home</a>
+      <a href="./directory.html">Directory</a>
+      <a href="./join.html">Join</a>
+      <a href="./discover.html">Discover</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Application Received 🎉</h1>
+    <p>Here’s a copy of what you submitted. We’ve also sent a confirmation to your email (if provided).</p>
+
+    <dl id="summary" class="summary"></dl>
+
+    <a class="btn" href="./index.html">Back to Home</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Read query params
+    const params = new URLSearchParams(location.search);
+    const fields = [
+      ['First Name','first'],
+      ['Last Name','last'],
+      ['Email','email'],
+      ['Phone','phone'],
+      ['Organization','org'],
+      ['Title/Position','title'],
+      ['Website','website'],
+      ['Membership','membership'],
+      ['Date (loaded timestamp)','loaded']
+    ];
+
+    const dl = document.getElementById('summary');
+    fields.forEach(([label,key]) => {
+      const val = params.get(key);
+      if (val !== null && val !== '') {
+        const dt = document.createElement('dt'); dt.textContent = label;
+        const dd = document.createElement('dd'); dd.textContent = val;
+        dl.append(dt, dd);
+      }
+    });
+  </script>
+</body>
+</html>

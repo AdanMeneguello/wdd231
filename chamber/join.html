@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join – Chamber of Commerce</title>
+
+  <!-- Reuse your site CSS; add join.css depois -->
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/large.css">
+  <link rel="stylesheet" href="./styles/join.css">
+
+  <meta name="description" content="Join the Chamber of Commerce. Choose a membership level and submit your business details.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="title-logo">
+        <a href="./index.html">Jundiai Chamber</a>
+    </div>
+
+    <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+    
+    <nav id="site-nav" class="nav">
+        <ul>
+            <li><a href="./directory.html" >Directory</a></li>
+            <li><a href="./discovery.html">Discover</a></li>
+            <li><a href="./join.html" aria-current="page">Join</a></li>
+            <li><a href="./index.html">Home</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Join the Chamber</h1>
+    <p class="intro">Select a membership level to see benefits and complete the application.</p>
+
+    <!-- Membership levels (4) + modal buttons -->
+    <section class="memberships" aria-labelledby="levelsTitle">
+      <h2 id="levelsTitle">Membership Levels</h2>
+
+      <div class="grid">
+
+        <!-- 1. Non-Profit -->
+        <article class="card fade-in" tabindex="0">
+          <header>
+            <h3>Non-Profit</h3>
+            <p class="price">$0 / year</p>
+          </header>
+          <p>For registered non-profit organizations.</p>
+          <button class="open-modal" data-modal="np-modal" aria-haspopup="dialog">View Benefits</button>
+        </article>
+
+        <!-- 2. Bronze -->
+        <article class="card fade-in" tabindex="0">
+          <header>
+            <h3>Bronze</h3>
+            <p class="price">$120 / year</p>
+          </header>
+          <p>Perfect for freelancers and small teams.</p>
+          <button class="open-modal" data-modal="bronze-modal" aria-haspopup="dialog">View Benefits</button>
+        </article>
+
+        <!-- 3. Silver -->
+        <article class="card fade-in" tabindex="0">
+          <header>
+            <h3>Silver</h3>
+            <p class="price">$360 / year</p>
+          </header>
+          <p>Growing businesses needing more exposure.</p>
+          <button class="open-modal" data-modal="silver-modal" aria-haspopup="dialog">View Benefits</button>
+        </article>
+
+        <!-- 4. Gold -->
+        <article class="card fade-in" tabindex="0">
+          <header>
+            <h3>Gold</h3>
+            <p class="price">$840 / year</p>
+          </header>
+          <p>Maximum visibility and partnership.</p>
+          <button class="open-modal" data-modal="gold-modal" aria-haspopup="dialog">View Benefits</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="application" aria-labelledby="applyTitle">
+      <h2 id="applyTitle">Application Form</h2>
+
+      <!-- GET to thanks.html  -->
+      <form id="joinForm" method="get" action="./thanks.html" novalidate>
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <div class="field">
+            <label for="first">First Name</label>
+            <input id="first" name="first" type="text" autocomplete="given-name" required minlength="2" />
+          </div>
+
+          <div class="field">
+            <label for="last">Last Name</label>
+            <input id="last" name="last" type="text" autocomplete="family-name" required minlength="2" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">Mobile Phone</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Business Information</legend>
+
+          <div class="field">
+            <label for="org">Business / Organization Name</label>
+            <input id="org" name="org" type="text" autocomplete="organization" required minlength="2" />
+          </div>
+
+          <div class="field">
+            <label for="title">Title / Position <small>(letters, spaces & hyphens only)</small></label>
+            <input id="title" name="title" type="text"
+                   pattern="^[A-Za-z\\s-]{2,}$"
+                   title="Use only letters, spaces, and hyphens. Minimum of 2 characters."
+                   required />
+          </div>
+
+          <div class="field">
+            <label for="website">Website (optional)</label>
+            <input id="website" name="website" type="url" inputmode="url" placeholder="https://example.com" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Membership Level</legend>
+
+          <div class="choices">
+            <label class="choice"><input type="radio" name="membership" value="Non-Profit" required> Non-Profit</label>
+            <label class="choice"><input type="radio" name="membership" value="Bronze"> Bronze</label>
+            <label class="choice"><input type="radio" name="membership" value="Silver"> Silver</label>
+            <label class="choice"><input type="radio" name="membership" value="Gold"> Gold</label>
+          </div>
+        </fieldset>
+
+        <!-- Hidden timestamp when the page loads (client-side) -->
+        <input type="hidden" id="loaded" name="loaded" value="">
+
+        <div class="actions">
+          <button type="submit" class="btn">Submit Application</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modals (one per level) -->
+  <dialog id="np-modal" class="modal" aria-labelledby="np-title">
+    <h3 id="np-title">Non-Profit Benefits</h3>
+    <ul>
+      <li>Directory listing</li>
+      <li>Community announcements</li>
+      <li>Access to member newsletter</li>
+    </ul>
+    <form method="dialog">
+      <button class="close">Close</button>
+    </form>
+  </dialog>
+
+  <dialog id="bronze-modal" class="modal" aria-labelledby="bronze-title">
+    <h3 id="bronze-title">Bronze Benefits</h3>
+    <ul>
+      <li>Everything in Non-Profit</li>
+      <li>Event invitations</li>
+      <li>1 sponsored social post / quarter</li>
+    </ul>
+    <form method="dialog">
+      <button class="close">Close</button>
+    </form>
+  </dialog>
+
+  <dialog id="silver-modal" class="modal" aria-labelledby="silver-title">
+    <h3 id="silver-title">Silver Benefits</h3>
+    <ul>
+      <li>Everything in Bronze</li>
+      <li>Hero banner rotation</li>
+      <li>Quarterly promo feature</li>
+    </ul>
+    <form method="dialog">
+      <button class="close">Close</button>
+    </form>
+  </dialog>
+
+  <dialog id="gold-modal" class="modal" aria-labelledby="gold-title">
+    <h3 id="gold-title">Gold Benefits</h3>
+    <ul>
+      <li>Everything in Silver</li>
+      <li>Homepage spotlight</li>
+      <li>Event co-host & keynote opportunities</li>
+    </ul>
+    <form method="dialog">
+      <button class="close">Close</button>
+    </form>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 🌌 <span class="student-name">Adan Souza Meneguello</span> 🌌 Brazil</p>
+    <p id="lastModified">Last Modification: </p>
+  </footer>
+
+  <script src="scripts/join.js" defer></script>
+  <script src="scripts/utils.js" ></script>
+ 
+</body>
+
+<footer>
+
+</footer>
+</html>

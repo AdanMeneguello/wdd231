@@ -16,7 +16,7 @@ async function loadSpotlights() {
       return lvl === 'gold' || lvl === 'silver';
     });
 
-    const chosen = shuffle(goldSilver).slice(0, 3); // pegue 2–3; ajuste se quiser 2
+    const chosen = shuffle(goldSilver).slice(0, 3); 
     wrap.innerHTML = '';
 
     chosen.forEach(m => {
@@ -34,7 +34,7 @@ async function loadSpotlights() {
     });
   } catch (e) {
     console.error('Spotlights error', e);
-    wrap.textContent = 'Não foi possível carregar os destaques.';
+    wrap.textContent = 'Unable to load highlights';
   }
 }
 loadSpotlights();

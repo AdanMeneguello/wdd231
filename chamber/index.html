@@ -9,14 +9,21 @@
   <link rel="stylesheet" href="./styles/large.css" />
 </head>
 <body>
-  <header>
-    <a class="brand" href="./index.html">Jundiai Chamber</a>
-    <button id="menuBtn" aria-label="abrir menu">☰</button>
-    <nav id="primaryNav" class="closed">
-      <a href="./directory.html">Directory</a>
-      <a href="./discover.html">Discover</a>
-      <a href="./join.html">Join</a>
-      <a class="active" href="./index.html">Home</a>
+
+  <header class="site-header">
+    <div class="title-logo">
+        <a href="./index.html">Jundiai Chamber</a>
+    </div>
+
+    <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+    
+    <nav id="site-nav" class="nav">
+        <ul>
+            <li><a href="./directory.html" >Directory</a></li>
+            <li><a href="./discovery.html">Discover</a></li>
+            <li><a href="./join.html">Join</a></li>
+            <li><a href="./index.html" aria-current="page">Home</a></li>
+        </ul>
     </nav>
   </header>
 
@@ -57,16 +64,15 @@
     </section>
   </main>
 
-  <footer>
-    <p>© Adan Souza Meneguello Brazil</p>
-    <p>Last Modification: <span id="last-mod"></span></p>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 🌌 <span class="student-name">Adan Souza Meneguello</span> 🌌 Brazil</p>
+    <p id="lastModified">Last Modification: </p>
   </footer>
 
   <script src="./scripts/nav.js" defer></script>
   <script src="./scripts/weather.js" defer></script>
   <script src="./scripts/spotlights.js" defer></script>
-  <script>
-    document.getElementById('last-mod').textContent = document.lastModified;
-  </script>
+  <script src="scripts/utils.js" defer></script>
+  
 </body>
 </html>

@@ -1,0 +1,4 @@
+main{padding:clamp(1rem,2vw,2rem)}
+.summary{display:grid; grid-template-columns: 1fr 2fr; gap:.5rem 1rem; margin:1rem 0 2rem}
+.summary dt{font-weight:700}
+.btn{display:inline-block; padding:.7rem 1rem; background:#1a73e8; color:#fff; border-radius:.75rem}
