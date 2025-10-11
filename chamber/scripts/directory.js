@@ -16,10 +16,11 @@ async function loadMembers(){
         });
 
         listBtn.addEventListener('click', () => {
-            listBtn.classList.add('active'); listBtn.classList.remove('active')
+            listBtn.classList.add('active'); gridBtn.classList.remove('active')
             membersContainer.className = 'list';
             renderGrid(data);
         });
+
     }catch(err){
         console.error('Directory load error: ', err)
         membersContainer.innerHTML = '<p>Failed to load members.</p>';

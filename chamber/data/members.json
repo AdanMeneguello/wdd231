@@ -1,21 +1,56 @@
 [
-    {
-      "name": "Alpha Tech",
-      "address": "101 Innovation Way, My City",
-      "phone": "(555) 111-1001",
-      "url": "https://alphatech.example.com",
-      "image": "images/alpha.jpg",
-      "membership": 3,
-      "blurb": "Cloud & AI solutions"
-    },
-    {
-      "name": "Bravo Foods",
-      "address": "22 Market St, My City",
-      "phone": "(555) 222-2002",
-      "url": "https://bravofoods.example.com",
-      "image": "images/bravo.jpg",
-      "membership": 2,
-      "blurb": "Local gourmet market"
-    }
-
-  ]
+  {
+    "name": "Alpha Tech",
+    "address": "101 Innovation Way, My City",
+    "phone": "(555) 111-1001",
+    "url": "https://alphatech.example.com",
+    "image": "./images/alpha-tech.jpg",
+    "membership": 3,
+    "blurb": "Cloud & AI solutions"
+  },
+  {
+    "name": "Bravo Foods",
+    "address": "22 Market St, My City",
+    "phone": "(555) 222-2002",
+    "url": "https://bravofoods.example.com",
+    "image": "images/bravo-foods.jpg",
+    "membership": 2,
+    "blurb": "Local gourmet market"
+  },
+  {
+    "name": "Gamma Innovations",
+    "address": "305 Tech Avenue, My City",
+    "phone": "(555) 333-3003",
+    "url": "https://gammainnovations.example.com",
+    "image": "./images/gamma-innovations.jpg",
+    "membership": 3,
+    "blurb": "Cutting-edge robotics and automation"
+  },
+  {
+    "name": "Delta Energy",
+    "address": "48 Power Lane, My City",
+    "phone": "(555) 444-4004",
+    "url": "https://deltaenergy.example.com",
+    "image": "./images/delta-energy.jpg",
+    "membership": 2,
+    "blurb": "Sustainable energy solutions"
+  },
+  {
+    "name": "Echo Designs",
+    "address": "127 Creative Blvd, My City",
+    "phone": "(555) 555-5005",
+    "url": "https://echodesigns.example.com",
+    "image": "./images/echo-designs.jpg",
+    "membership": 1,
+    "blurb": "Innovative fashion and textiles"
+  },
+  {
+    "name": "Foxtrot Health",
+    "address": "89 Wellness Road, My City",
+    "phone": "(555) 666-6006",
+    "url": "https://foxtrothealth.example.com",
+    "image": "./images/foxtrot-health.jpg",
+    "membership": 3,
+    "blurb": "Advanced healthcare technologies"
+  }  
+]

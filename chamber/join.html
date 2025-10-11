@@ -3,44 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Join – Chamber of Commerce</title>
+  <title>Join – Jundiai Chamber of Commerce</title>
+  <meta name="description" content="Main page - WDD231 - W02 Assignment: Chamber Directory Page" />
+  <meta name="author" content="Adan Souza Meneguello" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Reuse your site CSS; add join.css depois -->
+
   <link rel="stylesheet" href="./styles/base.css">
   <link rel="stylesheet" href="./styles/large.css">
   <link rel="stylesheet" href="./styles/join.css">
 
+  <meta property="og:title" content="Jundiai Chamber of Commerce | Join">
+  <meta property="og:description" content="Local to select a membership level to see benefits and register the application">
+  <meta property="og:url" content="https://adanmeneguello.github.io/wdd231/chamber/join.html">
   <meta name="description" content="Join the Chamber of Commerce. Choose a membership level and submit your business details.">
+
 </head>
 <body>
   <header class="site-header">
-    <div class="title-logo">
-        <a href="./index.html">Jundiai Chamber</a>
-    </div>
-
-    <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+        <div class="title-logo">
+            <a href="./index.html">Jundiai Chamber</a>
+        </div>
     
-    <nav id="site-nav" class="nav">
-        <ul>
-            <li><a href="./directory.html" >Directory</a></li>
-            <li><a href="./discovery.html">Discover</a></li>
-            <li><a href="./join.html" aria-current="page">Join</a></li>
-            <li><a href="./index.html">Home</a></li>
-        </ul>
-    </nav>
-  </header>
+        <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+        
+        <nav id="site-nav" class="nav">
+            <ul>
+                <li><a href="./directory.html" aria-current="page">Directory</a></li>
+                <li><a href="./discovery.html">Discover</a></li>
+                <li><a href="./join.html">Join</a></li>
+                <li><a href="./index.html" >Home</a></li>
+            </ul>
+        </nav>
+      </header>
 
   <main id="main">
     <h1>Join the Chamber</h1>
     <p class="intro">Select a membership level to see benefits and complete the application.</p>
 
-    <!-- Membership levels (4) + modal buttons -->
+    <!-- Membership levels and modal buttons -->
     <section class="memberships" aria-labelledby="levelsTitle">
       <h2 id="levelsTitle">Membership Levels</h2>
 
       <div class="grid">
-
-        <!-- 1. Non-Profit -->
+        <!-- Non-Profit card-->
         <article class="card fade-in" tabindex="0">
           <header>
             <h3>Non-Profit</h3>
@@ -50,7 +58,7 @@
           <button class="open-modal" data-modal="np-modal" aria-haspopup="dialog">View Benefits</button>
         </article>
 
-        <!-- 2. Bronze -->
+        <!-- Bronze card -->
         <article class="card fade-in" tabindex="0">
           <header>
             <h3>Bronze</h3>
@@ -60,7 +68,7 @@
           <button class="open-modal" data-modal="bronze-modal" aria-haspopup="dialog">View Benefits</button>
         </article>
 
-        <!-- 3. Silver -->
+        <!-- Silver card -->
         <article class="card fade-in" tabindex="0">
           <header>
             <h3>Silver</h3>
@@ -70,7 +78,7 @@
           <button class="open-modal" data-modal="silver-modal" aria-haspopup="dialog">View Benefits</button>
         </article>
 
-        <!-- 4. Gold -->
+        <!-- Gold card -->
         <article class="card fade-in" tabindex="0">
           <header>
             <h3>Gold</h3>
@@ -82,11 +90,9 @@
       </div>
     </section>
 
-    <!-- Form -->
+    <!-- Application Form -->
     <section class="application" aria-labelledby="applyTitle">
       <h2 id="applyTitle">Application Form</h2>
-
-      <!-- GET to thanks.html  -->
       <form id="joinForm" method="get" action="./thanks.html" novalidate>
         <fieldset>
           <legend>Your Information</legend>
@@ -155,6 +161,10 @@
     </section>
   </main>
 
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+  </footer>
+
   <!-- Modals (one per level) -->
   <dialog id="np-modal" class="modal" aria-labelledby="np-title">
     <h3 id="np-title">Non-Profit Benefits</h3>
@@ -204,17 +214,6 @@
     </form>
   </dialog>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> 🌌 <span class="student-name">Adan Souza Meneguello</span> 🌌 Brazil</p>
-    <p id="lastModified">Last Modification: </p>
-  </footer>
-
-  <script src="scripts/join.js" defer></script>
-  <script src="scripts/utils.js" ></script>
- 
+  <script src="./scripts/join.js" defer></script>
 </body>
-
-<footer>
-
-</footer>
 </html>

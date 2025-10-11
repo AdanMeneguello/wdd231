@@ -57,7 +57,6 @@ text-decoration: underline;
 }
 
 
-
 .container{
     display: 1rem;
     max-width: 1100px;
@@ -79,7 +78,9 @@ text-decoration: underline;
 }
 
 .view-toggle button.active {
-    border-color: var(--brand); box-shadow: 0 0 0 1.5px ;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 1.5px ;
+    background-color: #f1f1f1;
 }
 
 #members.grid{
@@ -89,7 +90,7 @@ text-decoration: underline;
 }
 
 #members.list{
-    display: block
+    display: block;
 }
 
 .members.card{
