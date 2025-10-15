@@ -1,0 +1,105 @@
+:root {
+    --gold: #f5c542;
+    --charcoal: #1e1f24;
+    --steel: #2c2f36;
+    --white: #ffffff;
+    --accent: #3ba4f6;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--steel);
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: "Orbitron", sans-serif;
+    color: var(--gold);
+  }
+  
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-header {
+    background-color: var(--charcoal);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .title-logo span {
+    color: var(--gold);
+  }
+  
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #23262e;
+    border: 1px solid #2f3340;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .swatch {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .color-box {
+    width: 100px;
+    height: 80px;
+    border-radius: 8px;
+    color: #111;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+  }
+  
+  .gold {
+    background-color: var(--gold);
+  }
+  
+  .charcoal {
+    background-color: var(--charcoal);
+    color: var(--white);
+  }
+  
+  .steel {
+    background-color: var(--steel);
+    color: var(--white);
+  }
+  
+  .accent {
+    background-color: var(--accent);
+  }
+
+  .white {
+    background-color: var(--white);
+  }
+  
+  .site-footer {
+    background-color: var(--charcoal);
+    text-align: center;
+    padding: 10px;
+  }
+  
