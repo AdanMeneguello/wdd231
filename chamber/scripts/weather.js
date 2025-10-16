@@ -1,7 +1,6 @@
 // scripts/weather.js  (no key, uses Open-Meteo)
 // Jundiai city
 
-
 const LAT = -23.1857
 const LON = -46.8978
 

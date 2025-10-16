@@ -1,4 +1,5 @@
 
+    //menu button code
     const menuBtn = document.getElementById('menu-btn');
     const nav = document.getElementById('site-nav');
     if (menuBtn && nav){
@@ -7,6 +8,7 @@
         menuBtn.setAttribute('aria-expended', String(open));
         });
     }
-        
+    
+    //footer code
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;

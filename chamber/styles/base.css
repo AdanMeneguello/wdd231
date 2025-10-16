@@ -236,7 +236,6 @@ footer p{
   color: var(--muted);
 }
 
-/* ==================================================== */
 /* ===== Header / Nav  ===== */
 
 .site-header {
@@ -297,7 +296,7 @@ footer p{
   text-decoration: underline;
 }
 
-/* mobile behavior */
+/* mobile */
 @media (max-width: 720px){
 
   #menu-btn{
