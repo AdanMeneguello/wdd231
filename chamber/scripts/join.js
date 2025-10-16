@@ -1,4 +1,5 @@
 // Accessible mobile menu toggle (reutilize se já tem algo parecido)
+
 const menuBtn = document.getElementById('menuToggle');
 const nav = document.getElementById('siteNav');
 if (menuBtn && nav) {

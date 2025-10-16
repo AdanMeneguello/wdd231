@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Jundiai Museum",
+      "address": "100 Main St",
+      "description": "Local history and rotating art exhibits.",
+      "website": "https://example.com/museum",
+      "image": "place-1.webp"
+    },
+    {
+      "name": "Riverside Jundiai Park",
+      "address": "200 River Ave",
+      "description": "Green area for walks, sports, and concerts.",
+      "website": "https://example.com/park",
+      "image": "place-2.webp"
+    },
+    {
+      "name": "Sunrise Café Jundiai",
+      "address": "45 Market Rd",
+      "description": "Breakfast and pastries from local bakers.",
+      "website": "https://example.com/cafe",
+      "image": "place-3.webp"
+    },
+    {
+      "name": "Tech Hub",
+      "address": "19 Innovation Way",
+      "description": "Community workspace and startup events.",
+      "website": "https://example.com/hub",
+      "image": "place-4.webp"
+    },
+    {
+      "name": "Jundiai Grand Theater",
+      "address": "7 Center Plaza",
+      "description": "Plays, films, and live music all year.",
+      "website": "https://example.com/theater",
+      "image": "place-5.webp"
+    },
+    {
+      "name": "Farmers Market Jundiai",
+      "address": "3rd & Pine",
+      "description": "Fresh produce every weekend.",
+      "website": "https://example.com/market",
+      "image": "place-6.webp"
+    },
+    {
+      "name": "Art Alley Jundiai",
+      "address": "12 Oak Lane",
+      "description": "Outdoor murals by local artists.",
+      "website": "https://example.com/art",
+      "image": "place-7.webp"
+    },
+    {
+      "name": "Old Lighthouse of the Jundiai City",
+      "address": "Harbor Point",
+      "description": "Guided tours and sunset views on the sea.",
+      "website": "https://example.com/lighthouse",
+      "image": "place-8.webp"
+    }
+  ]
+  

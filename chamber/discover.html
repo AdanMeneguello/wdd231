@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discover – Chamber of Commerce</title>
+  <meta name="description" content="Discover local places and members. Learn more about the community.">
+  <meta name="author" content="Adan Souza Meneguello" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/large.css">
+  <link rel="stylesheet" href="./styles/discover.css">
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="title-logo">
+        <a href="./index.html">Jundiai Chamber</a>
+    </div>
+
+    <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+    
+    <nav id="site-nav" class="nav">
+        <ul>
+            <li><a href="./directory.html">Directory</a></li>
+            <li><a href="./discover.html" aria-current="page">Discover</a></li>
+            <li><a href="./join.html">Join</a></li>
+            <li><a href="./index.html">Home</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Discover Our Community</h1>
+    <p id="visitMsg" class="visit-msg">Loading your visit info…</p>
+
+    <section class="cards" aria-labelledby="cardsTitle">
+      <h2 id="cardsTitle" class="sr-only">Featured Places</h2>
+      <!-- cards are injected by JS (discover.js)-->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> 🌌 <span class="student-name">Adan Souza Meneguello</span> 🌌 Brazil</p>
+    <p id="lastModified">Last Modification: </p>
+  </footer>
+
+  <script src="./scripts/nav.js" defer></script>
+  <script src="./scripts/utils.js" defer></script>
+  <script src="./scripts/discover.js" defer></script> 
+
+  
+</body>
+</html>

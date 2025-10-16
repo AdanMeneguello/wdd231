@@ -43,10 +43,6 @@ margin: 0;
 padding: 0;
 }
 
-.site-header nav ul li {
-margin-left: 20px;
-}
-
 .site-header nav ul li a {
 color: white;
 text-decoration: none;
@@ -56,11 +52,10 @@ text-decoration: none;
 text-decoration: underline;
 }
 
-
-.container{
-    display: 1rem;
+.container {
     max-width: 1100px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .view-toggle{
@@ -83,44 +78,57 @@ text-decoration: underline;
     background-color: #f1f1f1;
 }
 
-#members.grid{
+#members.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1rem;
 }
 
-#members.list{
+#members.list {
     display: block;
 }
 
-.members.card{
+/* Card base */
+.member-card {
     border: 1px solid #e2e5ea;
     border-radius: .6rem;
     padding: .75rem;
     background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    text-align: center;
 }
 
-.members.card img {
-    width: 100%; 
+.member-card img {
+    width: 100%;
     height: auto;
-    display: block; 
-    border-radius:.4rem;
+    display: block;
+    border-radius: .4rem;
+    margin-bottom: .5rem;
 }
 
-.members.item {
-    border-bottom: 1px solid #e2e5ea;
-    padding: .75rem 0;
+.member-card h3 {
+    margin: .25rem 0;
+}
+
+.member-card p {
+    margin: .25rem 0;
+}
+
+/* Estilo para modo lista */
+#members.list .member-card {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    text-align: left;
+    gap: 1rem;
 }
 
-.member.item img{
-    width: 56px;
-    height: 56px;
+#members.list .member-card img {
+    width: 64px;
+    height: 64px;
     object-fit: cover;
     border-radius: .4rem;
 }
+
 
 @media (min-width: 48rem){
     .nav {
