@@ -1,0 +1,40 @@
+form label{
+    display: grid;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  
+  input, select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #3a3f4a;
+    background: #1a1c22;
+    color: var(--ink);
+  }
+  
+  .grid-2{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions{
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .level-summary{
+    background: #1b1e25;
+    border: 1px solid #343a4a;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .row .form-actions{ 
+    margin-left: auto;
+    display: flex;
+    gap: 8px;  }
+  

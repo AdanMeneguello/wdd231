@@ -1,0 +1,135 @@
+{
+    "games": [
+      {
+        "id": "assetto-corsa",
+        "title": "Assetto Corsa",
+        "platforms": ["PC", "PlayStation", "Xbox"],
+        "physicsStyle": "sim",
+        "focusTags": ["GT", "Formula", "Street"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-2500K", "gpu": "GTX 750 Ti", "ramGB": 8 },
+        "image": { "src": "images/games/assetto-corsa.webp", "alt": "Assetto Corsa cover" },
+        "notes": "Highly moddable simulator with large car and track library.",
+        "links": { "site": "https://www.assettocorsa.net", "guide": "https://simracingwiki.com/wiki/Assetto_Corsa" }
+      },
+      {
+        "id": "assetto-corsa-competizione",
+        "title": "Assetto Corsa Competizione",
+        "platforms": ["PC", "PlayStation", "Xbox"],
+        "physicsStyle": "sim",
+        "focusTags": ["GT", "Endurance"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-8600K", "gpu": "GTX 1070", "ramGB": 16 },
+        "image": { "src": "images/games/acc.webp", "alt": "ACC cover" },
+        "notes": "Official GT World Challenge game with laser-scanned tracks.",
+        "links": { "site": "https://www.assettocorsa.gg", "guide": "https://simracingwiki.com/wiki/Assetto_Corsa_Competizione" }
+      },
+      {
+        "id": "iracing",
+        "title": "iRacing",
+        "platforms": ["PC"],
+        "physicsStyle": "sim",
+        "focusTags": ["GT", "Oval", "Formula", "Endurance"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-9600K", "gpu": "GTX 1660", "ramGB": 8 },
+        "image": { "src": "images/games/iracing.webp", "alt": "iRacing cover" },
+        "notes": "Subscription-based simulator focused on ranked online racing.",
+        "links": { "site": "https://www.iracing.com", "guide": "https://simracingwiki.com/wiki/IRacing" }
+      },
+      {
+        "id": "rfactor-2",
+        "title": "rFactor 2",
+        "platforms": ["PC"],
+        "physicsStyle": "sim",
+        "focusTags": ["GT", "Formula", "Prototype"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-9600K", "gpu": "GTX 1060", "ramGB": 8 },
+        "image": { "src": "images/games/rfactor2.webp", "alt": "rFactor 2 cover" },
+        "notes": "Known for realistic tire model and advanced physics.",
+        "links": { "site": "https://www.studio397.com", "guide": "https://simracingwiki.com/wiki/RFactor_2" }
+      },
+      {
+        "id": "automobilista-2",
+        "title": "Automobilista 2",
+        "platforms": ["PC"],
+        "physicsStyle": "sim",
+        "focusTags": ["GT", "Formula", "Rally", "Kart"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-9600K", "gpu": "GTX 1070", "ramGB": 8 },
+        "image": { "src": "images/games/automobilista2.webp", "alt": "Automobilista 2 cover" },
+        "notes": "Brazilian-developed sim built on the Madness Engine.",
+        "links": { "site": "https://www.game-automobilista2.com", "guide": "https://simracingwiki.com/wiki/Automobilista_2" }
+      },
+      {
+        "id": "gran-turismo-7",
+        "title": "Gran Turismo 7",
+        "platforms": ["PlayStation"],
+        "physicsStyle": "simcade",
+        "focusTags": ["GT", "Street"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "-", "gpu": "-", "ramGB": 0 },
+        "image": { "src": "images/games/gt7.webp", "alt": "Gran Turismo 7 cover" },
+        "notes": "PlayStation-exclusive series balancing realism and accessibility.",
+        "links": { "site": "https://www.gran-turismo.com", "guide": "https://simracingwiki.com/wiki/Gran_Turismo_7" }
+      },
+      {
+        "id": "forza-motorsport",
+        "title": "Forza Motorsport (2023)",
+        "platforms": ["PC", "Xbox"],
+        "physicsStyle": "simcade",
+        "focusTags": ["GT", "Street"],
+        "hasVR": false,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-8400", "gpu": "GTX 1070", "ramGB": 16 },
+        "image": { "src": "images/games/forza2023.webp", "alt": "Forza Motorsport cover" },
+        "notes": "Microsoft’s flagship simcade with realistic graphics and tuning.",
+        "links": { "site": "https://forza.net", "guide": "https://simracingwiki.com/wiki/Forza_Motorsport" }
+      },
+      {
+        "id": "f1-25",
+        "title": "F1 25",
+        "platforms": ["PC", "PlayStation", "Xbox"],
+        "physicsStyle": "simcade",
+        "focusTags": ["Formula"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-9600K", "gpu": "RTX 2060", "ramGB": 16 },
+        "image": { "src": "images/games/f125.webp", "alt": "F1 24 cover" },
+        "notes": "Official Formula 1 game with improved tire model and VR support.",
+        "links": { "site": "https://www.ea.com/games/f1/f1-25", "guide": "https://simracingwiki.com/wiki/F1_25" }
+      },
+      {
+        "id": "dirt-rally-2",
+        "title": "DiRT Rally 2.0",
+        "platforms": ["PC", "PlayStation", "Xbox"],
+        "physicsStyle": "simcade",
+        "focusTags": ["Rally"],
+        "hasVR": true,
+        "onlineCompetitive": true,
+        "minSpec": { "cpu": "i5-8400", "gpu": "GTX 970", "ramGB": 8 },
+        "image": { "src": "images/games/dirty-rally2.webp", "alt": "DiRT Rally 2.0 cover" },
+        "notes": "Benchmark rally sim; excellent VR experience and community.",
+        "links": { "site": "https://dirtgame.com", "guide": "https://simracingwiki.com/wiki/DiRT_Rally_2.0" }
+      },
+      {
+        "id": "kartkraft",
+        "title": "KartKraft",
+        "platforms": ["PC"],
+        "physicsStyle": "sim",
+        "focusTags": ["Kart"],
+        "hasVR": true,
+        "onlineCompetitive": false,
+        "minSpec": { "cpu": "i5-8400", "gpu": "GTX 970", "ramGB": 8 },
+        "image": { "src": "images/games/kartkraft.webp", "alt": "KartKraft cover" },
+        "notes": "Realistic karting simulator with excellent physics and visuals.",
+        "links": { "site": "https://kartkraftgame.com", "guide": "https://simracingwiki.com/wiki/KartKraft" }
+      }
+    ]
+  }
+  

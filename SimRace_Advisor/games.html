@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Sim racing games and platforms: ACC, iRacing, rFactor 2, GT, Forza, F1, more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Games & Platforms — SimRace Advisor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="title-logo" href="index.html">SimRace Advisor</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="site-nav" hidden>
+      <a href="index.html">Home</a>
+      <a href="wheels.html">Wheels & Bases</a>
+      <a href="games.html" aria-current="page">Games & Platforms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+        <h1>Games & Platforms</h1>
+        <p>Browse popular titles. Filter by platform and focus area.</p>
+      
+        <form id="games-filter" class="row">
+          <label>Platform
+            <select name="platform">
+              <option value="all">All</option>
+              <option value="PC">PC</option>
+              <option value="PlayStation">PlayStation</option>
+              <option value="Xbox">Xbox</option>
+            </select>
+          </label>
+          <label>Focus
+            <select name="focus">
+              <option value="all">All</option>
+              <option value="GT">GT</option>
+              <option value="Formula">Formula</option>
+              <option value="Rally">Rally</option>
+              <option value="Kart">Kart</option>
+            </select>
+          </label>
+          <div class="form-actions">
+            <button type="button" id="btn-use-eval" class="btn">Use my evaluation</button>
+            <button type="button" id="btn-search" class="btn primary">Show games</button>
+          </div>
+        </form>
+      </section>
+      
+      <section id="games-list" class="cards-grid"></section>
+      <p id="games-tip" class="small"></p>
+      
+
+    <section id="games-list" class="cards-grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 SimRace Advisor</small>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/data.js"></script>
+  <script type="module" src="scripts/games.js"></script>
+  <script type="module">
+    import { fetchGames } from './js/data.js';
+
+    const list = document.getElementById('games-list');
+    const form = document.getElementById('games-filter');
+
+    const render = (games) => {
+      list.innerHTML = games.map(g => `
+        <article class="card">
+          <h3>${g.title}</h3>
+          <p><strong>Style:</strong> ${g.physicsStyle}</p>
+          <p><strong>Platforms:</strong> ${g.platforms.join(', ')}</p>
+          <p><strong>Focus:</strong> ${g.focusTags.join(', ')}</p>
+          <p><strong>VR:</strong> ${g.hasVR ? 'Yes' : 'No'} · <strong>Online:</strong> ${g.onlineCompetitive ? 'Yes' : 'No'}</p>
+          <p class="small"><strong>Min (PC):</strong> CPU ${g.minSpec.cpu}, GPU ${g.minSpec.gpu}, RAM ${g.minSpec.ramGB} GB</p>
+          ${g.notes ? `<p class="small">${g.notes}</p>` : ''}
+        </article>
+      `).join('');
+    };
+
+    const state = { all: [], filtered: [] };
+
+    const applyFilters = () => {
+      const pf = form.platform.value;
+      const fc = form.focus.value;
+      state.filtered = state.all.filter(g => {
+        const okP = pf === 'all' || g.platforms.includes(pf);
+        const okF = fc === 'all' || g.focusTags.includes(fc);
+        return okP && okF;
+      });
+      render(state.filtered);
+    };
+
+    (async () => {
+      try {
+        state.all = await fetchGames();
+        state.filtered = state.all;
+        render(state.filtered);
+      } catch (e) {
+        list.innerHTML = `<p class="error">Could not load games.</p>`;
+      }
+    })();
+
+    form.addEventListener('change', applyFilters);
+  </script>
+</body>
+</html>

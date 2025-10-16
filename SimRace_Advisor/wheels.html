@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Wheel & Base Guide for sim racing: drive types, torque, compatibility.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wheels & Bases — SimRace Advisor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="title-logo" href="index.html">SimRace Advisor</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="site-nav" hidden>
+      <a href="index.html">Home</a>
+      <a href="wheels.html" aria-current="page">Wheels & Bases</a>
+      <a href="games.html">Games & Platforms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Wheel & Base Guide</h1>
+      <p>Understand <strong>drive types</strong> (gear, belt, direct drive), <strong>torque</strong>, and <strong>platform compatibility</strong>. Pick a base that matches your <em>driver level</em> and budget.</p>
+    </section>
+
+    <section class="card">
+      <h2>Drive Types</h2>
+      <ul class="bullets">
+        <li><strong>Gear:</strong> affordable, crisp center, more noise.</li>
+        <li><strong>Belt:</strong> smoother feel, quieter, mid-tier torque.</li>
+        <li><strong>Direct Drive:</strong> strongest, most detailed, needs a sturdy rig.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+        <h2>Torque Ranges</h2>
+        <p>Click a type to preview a typical torque setup image.</p>
+        <div class="row">
+          <button class="btn" data-torque="gear">Gear</button>
+          <button class="btn" data-torque="belt">Belt</button>
+          <button class="btn" data-torque="dd">Direct Drive</button>
+        </div>
+      </section>
+      
+      <dialog id="torque-dialog">
+        <form method="dialog">
+          <header class="modal-header">
+            <h3>Torque Preview</h3>
+            <button class="close" value="close" aria-label="Close">✕</button>
+          </header>
+          <div class="modal-body">
+            <img id="torque-img" src="" alt="Torque preview" style="max-width:100%;height:auto;border-radius:10px;">
+          </div>
+          <footer class="modal-footer">
+            <button class="btn" value="close">Close</button>
+          </footer>
+        </form>
+      </dialog>
+      
+
+    <section class="card">
+      <h2>Compatibility</h2>
+      <p>PC often offers the largest ecosystem. Console support depends on the brand/model. Check wheel, base, and pedal adapters before buying.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <h4>SimRace Advisor</h4>
+    <p>© <span id="year"></span> 🌌 <span class="student-name">Adan Souza Meneguello</span> 🌌 Brazil</p>
+    <p id="lastModified">Last Modification: </p>
+  </footer>
+
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/wheels.js"></script>
+</body>
+</html>

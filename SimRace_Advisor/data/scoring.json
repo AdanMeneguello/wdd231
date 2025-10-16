@@ -1,0 +1,29 @@
+{
+    "levels": [
+      { "name": "Beginner", "min": 0, "max": 9 },
+      { "name": "Amateur", "min": 10, "max": 17 },
+      { "name": "Experienced", "min": 18, "max": 25 },
+      { "name": "Professional", "min": 26, "max": 32 }
+    ],
+    "categories": [
+      { "name": "Experience", "maxPoints": 6 },
+      { "name": "Weekly Hours", "maxPoints": 6 },
+      { "name": "Objective", "maxPoints": 6 },
+      { "name": "Budget (USD)", "maxPoints": 8 },
+      { "name": "Platform", "maxPoints": 3 },
+      { "name": "Focus", "maxPoints": 3 }
+    ],
+    "budgetCaps": {
+      "proNeverBelow": 400,
+      "limitMidBelow": 700
+    },
+    "rules": {
+      "professionalQualification": {
+        "hours": ">=10",
+        "objective": "competitive"
+      },
+      "tieBreaker": ["experience", "hours"]
+    },
+    "notes": "This data file is used to describe how driver levels are calculated and to populate the modal dialog 'How we score'."
+  }
+  

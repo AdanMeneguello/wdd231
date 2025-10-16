@@ -1,0 +1,103 @@
+{
+    "products": [
+      {
+        "id": "wb-logitech-g29-g920",
+        "category": "wheel_base",
+        "brand": "Logitech",
+        "model": "G29 / G920",
+        "levelTargets": ["Beginner","Amateur"],
+        "platforms": ["PC","PlayStation","Xbox"],
+        "priceUSD": { "min": 220, "max": 299 },
+        "budgetTier": "<$400",
+        "focusTags": ["General","GT","Compact"],
+        "specs": { "driveType": "gear", "torqueNm": 2.1 },
+        "image": { "src": "images/wheels/g29.webp", "alt": "Logitech G29/G920 wheel and pedals" },
+        "notes": "Bundle com volante e pedais de 2 estágios; ótimo para começar."
+      },
+      {
+        "id": "wb-thrustmaster-t128",
+        "category": "wheel_base",
+        "brand": "Thrustmaster",
+        "model": "T128",
+        "levelTargets": ["Beginner"],
+        "platforms": ["PC","PlayStation","Xbox"],
+        "priceUSD": { "min": 180, "max": 229 },
+        "budgetTier": "<$400",
+        "focusTags": ["General","Entry"],
+        "specs": { "driveType": "hybrid-belt", "torqueNm": 2.0 },
+        "image": { "src": "images/wheels/t128.webp", "alt": "Thrustmaster T128 entry wheel" },
+        "notes": "Entrada acessível; feedback melhor que gear puro."
+      },
+      {
+        "id": "wb-thrustmaster-t300rs",
+        "category": "wheel_base",
+        "brand": "Thrustmaster",
+        "model": "T300RS",
+        "levelTargets": ["Amateur"],
+        "platforms": ["PC","PlayStation"],
+        "priceUSD": { "min": 299, "max": 399 },
+        "budgetTier": "<$400",
+        "focusTags": ["GT","General"],
+        "specs": { "driveType": "belt", "torqueNm": 3.9 },
+        "image": { "src": "images/wheels/t300rs.webp", "alt": "Thrustmaster T300RS belt-driven wheel" },
+        "notes": "Clássico belt com sensação suave; boa evolução do gear."
+      },
+      {
+        "id": "wb-moza-r5-bundle",
+        "category": "wheel_base",
+        "brand": "MOZA",
+        "model": "R5 Bundle (Wheel+Pedals)",
+        "levelTargets": ["Amateur","Experienced"],
+        "platforms": ["PC"],
+        "priceUSD": { "min": 399, "max": 499 },
+        "budgetTier": "$401–700",
+        "focusTags": ["DD","GT","Formula","Compact"],
+        "specs": { "driveType": "dd", "torqueNm": 5 },
+        "image": { "src": "images/wheels/moza-r5.webp", "alt": "MOZA R5 direct drive bundle" },
+        "notes": "Pacote DD de entrada com excelente custo/benefício."
+      },
+      {
+        "id": "wb-fanatec-csl-dd-5nm",
+        "category": "wheel_base",
+        "brand": "Fanatec",
+        "model": "CSL DD (5 Nm)",
+        "levelTargets": ["Amateur","Experienced"],
+        "platforms": ["PC","Xbox"], 
+        "priceUSD": { "min": 399, "max": 449 },
+        "budgetTier": "$401–700",
+        "focusTags": ["DD","GT","Formula","VR"],
+        "specs": { "driveType": "dd", "torqueNm": 5 },
+        "image": { "src": "images/wheels/csl-dd-5nm.webp", "alt": "Fanatec CSL DD 5 Nm base" },
+        "notes": "DD de entrada; pode subir para 8 Nm com Boost Kit."
+      },
+      {
+        "id": "wb-moza-r9",
+        "category": "wheel_base",
+        "brand": "MOZA",
+        "model": "R9",
+        "levelTargets": ["Experienced"],
+        "platforms": ["PC"],
+        "priceUSD": { "min": 439, "max": 499 },
+        "budgetTier": "$401–700",
+        "focusTags": ["DD","GT","Formula","VR"],
+        "specs": { "driveType": "dd", "torqueNm": 9 },
+        "image": { "src": "images/wheels/moza-r9.webp", "alt": "MOZA R9 direct drive base" },
+        "notes": "DD 9 Nm estável; ótimo ponto de evolução."
+      },
+      {
+        "id": "wb-fanatec-dd1",
+        "category": "wheel_base",
+        "brand": "Fanatec",
+        "model": "DD1",
+        "levelTargets": ["Professional"],
+        "platforms": ["PC","Xbox"],
+        "priceUSD": { "min": 999, "max": 1199 },
+        "budgetTier": ">$1200",
+        "focusTags": ["DD","GT","Formula","VR","Esports"],
+        "specs": { "driveType": "dd", "torqueNm": 20 },
+        "image": { "src": "images/wheels/fanatec-dd1.webp", "alt": "Fanatec DD1 high-torque base" },
+        "notes": "Topo de linha para pilotos competitivos e rigs rígidos."
+      }
+    ]
+  }
+  

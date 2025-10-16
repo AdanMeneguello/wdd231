@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="SimRace Advisor helps sim racers choose the right gear by driver level.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SimRace Advisor — Evaluation & Recommendations</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/form.css">
+  <link rel="stylesheet" href="./styles/modal.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="title-logo" href="index.html">SimRace Advisor</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="site-nav" hidden>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="wheels.html">Wheels & Bases</a>
+      <a href="games.html">Games & Platforms</a>
+      <button id="open-scoring" class="linklike">How we score</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Find Your Driver Level</h1>
+      <p>Answer a few questions. We’ll compute your level and suggest the right gear.</p>
+    </section>
+
+    <section class="layout-split">
+        <div class="col">
+          <section id="evaluation" class="card">
+            <h2>Evaluation Form</h2>
+            <form id="eval-form" action="index.html" method="get" novalidate>
+              <div class="grid-2">
+                <label>
+                  Experience
+                  <select name="experience" required>
+                    <option value="none">None</option>
+                    <option value="basic">Basic</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                  </select>
+                </label>
+                <label>
+                  Weekly Hours
+                  <select name="hours" required>
+                    <option value="<=2">≤ 2</option>
+                    <option value="3-5">3–5</option>
+                    <option value="6-9">6–9</option>
+                    <option value=">=10">≥ 10</option>
+                  </select>
+                </label>
+                <label>
+                  Objective
+                  <select name="objective" required>
+                    <option value="fun">Fun / Occasional</option>
+                    <option value="improve">Improve lap times</option>
+                    <option value="leagues">Casual leagues</option>
+                    <option value="competitive">Competitive</option>
+                  </select>
+                </label>
+                <label>
+                  Budget (USD)
+                  <input type="number" name="budget" min="0" step="10" placeholder="e.g., 700" required>
+                </label>
+                <label>
+                  Platform
+                  <select name="platform" required>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="PC_casual">PC casual</option>
+                    <option value="PC_sim">PC sim/VR</option>
+                  </select>
+                </label>
+                <label>
+                  Focus
+                  <select name="focus" required>
+                    <option value="general">General</option>
+                    <option value="single">One discipline (GT / Formula / Rally)</option>
+                    <option value="specialized">Specialized + add-ons</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn primary">Calculate</button>
+                <button type="button" id="clear-form" class="btn">Clear</button>
+              </div>
+            </form>
+            <p class="small">Tip: The form uses <strong>URLSearchParams</strong> so you can share your results link.</p>
+          </section>
+        </div>
+      
+        <div class="col">
+          <section id="results" class="card">
+            <h2>Your Result</h2>
+            <div id="level-summary" class="level-summary">No data yet.</div>
+            <div id="recommendations" class="cards-grid"></div>
+          </section>
+        </div>
+      </section>
+
+    <!-- Modal <dialog> as required -->
+    <dialog id="scoring-dialog">
+      <form method="dialog">
+        <header class="modal-header">
+          <h3>How we score</h3>
+          <button class="close" value="close" aria-label="Close">✕</button>
+        </header>
+        <div class="modal-body" id="scoring-body">
+          <!-- Filled by JS from scoring rules -->
+        </div>
+        <footer class="modal-footer">
+          <button class="btn" value="close">Close</button>
+        </footer>
+      </form>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <h4>SimRace Advisor</h4>
+    <p>© <span id="year"></span> 🌌 <span class="student-name">Adan Souza Meneguello</span> 🌌 Brazil</p>
+    <p id="lastModified">Last Modification: </p>
+  </footer>
+
+  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/form.js"></script>
+  <script type="module" src="./scripts/render.js"></script>
+  <script type="module" src="./scripts/data.js"></script>
+</body>
+</html>
